@@ -1,0 +1,16 @@
+{
+  "name": "be-the-hero",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Be The Hero - Semana OmniStack 11.0",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail --prefix \"[{name}]\" --names \"BACKEND,FRONTEND,MOBILE\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm start --prefix backend\" \"npm start --prefix frontend\" \"npm start --prefix mobile\"",
+    "dev": "npm start",
+    "dev:backend": "npm start --prefix backend",
+    "dev:frontend": "npm start --prefix frontend",
+    "dev:mobile": "npm start --prefix mobile"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
